@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ---------------header------------------>
+    <header id="header">
+      <div class="section1">
+        <nav>
+          <h1 class="logo"><span>I</span>shika's <span>P</span>ortfolio</h1>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#About">About Me</a></li>
+            <li><a href="#MyWork">My Work</a></li>
+            <li><a href="#resume">Resume</a></li>
+          </ul>
+        </nav>
+
+        <div class="section2">
+          <div class="header-text">
+            <p>Web Developer</p>
+            <h1>
+              Hii,I am<br />
+              <span>Ishika</span> Parmar
+            </h1>
+          </div>
+          <div class="header-image">
+            <img src="bg1.jpg" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!------------------Main------------------>
+    <main id="main">
+      <!-- --------------About----------------- -->
+      <div id="About">
+        <div class="AboutMe">
+          <div class="MyImage">
+            <img src="Ishika.jpg" />
+          </div>
+          <div class="AboutDetail">
+            <h1 class="sub-title">About Me</h1>
+            Hi, I'm Ishika Parmar — a full stack web developer with a strong
+            interest in building both the frontend and backend of modern web
+            applications. On the frontend, I work with HTML, CSS, JavaScript,
+            and love using GSAP to create smooth animations and interactive 3D
+            elements. On the backend, I enjoy solving real-world problems with
+            code and constantly explore new technologies to enhance user
+            experience and performance. I'm currently open to full stack web
+            development internship or project opportunities where I can learn,
+            collaborate, and contribute to meaningful work.
+
+            <ul class="tab-titles">
+              <li class="tabs active-tab" onclick="opentab('skills')">Skill</li>
+              <li class="tabs" onclick="opentab('education')">Education</li>
+            </ul>
+            <div class="tabs-content active-tab-contents" id="skills">
+              <div class="skill">
+                <ul class="tech">
+                  <p><span>Technical Skill</span></p>
+                  <li>Html,Css,JavaScript</li>
+                  <li>C,Java,Python</li>
+                  <li>React js,GSAP</li>
+                </ul>
+                <ul class="non-tech">
+                  <p><span>Non-Technical Skill</span></p>
+                  <li>Problem Solving,Time Management.</li>
+                  <li>Team Work,Deep learning</li>
+                  <li>Critical Thinking</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tabs-content" id="education">
+              <ul>
+                <li>
+                  <span>2020-21 <br /></span>
+                  SSC At St.Joseph's Higher Seconadary School
+                </li>
+                <li>
+                  <span> 2022-23 <br /></span>
+                  HSC At St.Joseph's Higher Seconadary School
+                </li>
+                <li>
+                  <span> 2023-28<br /></span>
+                  (Currently in 3rd Year)<br />
+                  iMSC(CA&IT) At Ks school of Business Management & Information
+                  Technology
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -----------------------MyWork---------------------- -->
+      <div id="MyWork">
+        <div class="container">
+          <h1 class="sub-title">My Work</h1>
+          <div class="work-list">
+            <div class="work">
+             <a href="CurrencyConveter.html"> <img src="mywork_image2.jpg" /></a> 
+              <div class="layer">
+                <a href="CurrencyConveter.html"> <p>Currency Conveter</p></a>
+              </div>
+            </div>
+            <div class="work">
+                <a href="TicTacToe.html"> <img src="mywork6.jpg" /></a>
+              <div class="layer">
+                <a href="TicTacToe.html"><p>Tic Tac Toe</p></a>
+              </div>
+            </div>
+            <div class="work">
+              <a href="StopWatch.html" target="_main"
+                ><img src="mywork4.jpg"
+              /></a>
+              <div class="layer">
+                <a href="StopWatch.html"><p>Time Watch</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------resume------------------ -->
+      <div id="resume">
+        <div class="container">
+          <a href="#" class="btn" download
+            >Download Resume <i class="fa-solid fa-download"></i
+          ></a>
+        </div>
+      </div>
+    </main>
+    <!-- ----------------footer------------------------- -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+              <div class="left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ishikaparmar81@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 9265763617</p>
+                <div class="social-icon">
+                  <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+                  <a href=""><i class="fa-brands fa-square-snapchat"></i></a>
+                  <a href=""><i class="fa-brands fa-linkedin"></i></i></a>
+                  <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <div class="right">
+                <div class="footer-logo">
+                  <h1><span>I</span>SHIKA <span>P</span>ARMAR</h1>
+                </div>
+              </div>
+        </div>
+        <div class="copyright">
+          <p>copyright  &copy 2025 Ishika.This Portfolio and all content including project,design, and code , are protected  under copyright law. All right reseved <i class="fa-solid fa-heart"></i></p>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
