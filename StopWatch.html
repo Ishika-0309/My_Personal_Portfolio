@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practiec</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: rgb(96, 92, 92);
+      }
+      .TimerWatch {
+        height: 300px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(37, 41, 41);
+        border-radius: 10%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0);
+      }
+      #btnStart {
+        background-color: #4caf50;
+        color: rgb(10, 10, 10);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #btnStart:hover {
+        background-color: rgb(65, 105, 65);
+      }
+      #btnStop {
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #btnStop:hover {
+        background-color: rgb(149, 40, 40);
+      }
+      #btnReset {
+        background-color: #2196f3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #btnReset:hover {
+        background-color: rgb(74, 74, 126);
+      }
+      #timer {
+        font-size: 48px;
+        font-weight: bold;
+        color: #e2dada;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="TimerWatch">
+      <div id="timer">00:00:00</div>
+      <div id="btn">
+        <button id="btnStart">START</button>
+        <button id="btnStop">STOP</button>
+        <button id="btnReset">RESET</button>
+      </div>
+    </div>
+
+    <script>
+      let totalSeconds = 0;
+      let timerId = null;
+      let running = false;
+      let btnStart = document.getElementById("btnStart");
+      let btnStop = document.getElementById("btnStop");
+      let btnReset = document.getElementById("btnReset");
+      function formatTime(seconds) {
+        const hrs = String(Math.floor(seconds / 3600)).padStart(2, "0");
+        const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+        const secs = String(Math.floor(seconds % 60)).padStart(2, "0");
+        return `${hrs}:${mins}:${secs}`;
+      }
+      function updateDisplay() {
+        document.getElementById("timer").textContent = formatTime(totalSeconds);
+      }
+      function startTimer() {
+        if (!running) {
+          running = true;
+          timerId = setInterval(() => {
+            totalSeconds++;
+            updateDisplay();
+          }, 1000);
+        }
+      }
+      function stopTimer() {
+        clearInterval(timerId);
+        running = false;
+      }
+      function resetTimer() {
+        clearInterval(timerId);
+        totalSeconds = 0;
+        updateDisplay();
+        running = false;
+      }
+      btnStart.addEventListener("click", startTimer);
+      btnStop.addEventListener("click", stopTimer);
+      btnReset.addEventListener("click", resetTimer);
+      updateDisplay();
+    </script>
+  </body>
+</html>
